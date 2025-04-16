@@ -1,0 +1,13 @@
+2025/04/15-21:31:21.702 58ed Reusing MANIFEST /home/hangra/Documentos/WorksPace/CLIENTES/floresnet-api/src/utils/tokens/floresnet-session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/04/15-21:31:21.705 58ed Recovering log #177
+2025/04/15-21:31:21.756 58ed Reusing old log /home/hangra/Documentos/WorksPace/CLIENTES/floresnet-api/src/utils/tokens/floresnet-session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000177.log 
+2025/04/15-21:31:25.641 58ef Level-0 table #183: started
+2025/04/15-21:31:25.683 58ef Level-0 table #183: 202872 bytes OK
+2025/04/15-21:31:25.690 58ef Delete type=0 #177
+2025/04/15-21:31:25.692 58ee Manual compaction at level-0 from '\x00F\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00G\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/04/15-21:31:26.360 58ef Compacting 1@1 + 1@2 files
+2025/04/15-21:31:26.547 58ef Generated table #184@1: 26707 keys, 1128250 bytes
+2025/04/15-21:31:26.551 58ef Compacted 1@1 + 1@2 files => 1128250 bytes
+2025/04/15-21:31:26.555 58ef compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/04/15-21:31:26.556 58ef Delete type=2 #180
+2025/04/15-21:31:26.556 58ef Delete type=2 #183

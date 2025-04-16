@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compras - Floresnet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+    .produto {
+      background-color: #fff;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .produto p {
+      margin: 5px 0;
+    }
+    .total {
+      font-weight: bold;
+      color: #4CAF50;
+      font-size: 18px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Seu Carrinho de Compras</h1>
+
+  <div id="produtos"></div>
+
+  <div class="total" id="total"></div>
+
+  <a href="https://seusite.com/finalizar-compra" class="btn">Finalizar Compra</a>
+
+  <script>
+    // Função para obter os parâmetros da URL e exibir os produtos no carrinho
+    const urlParams = new URLSearchParams(window.location.search);
+    const produtos = decodeURIComponent(urlParams.get('produtos')).split(', ');
+
+    const produtosContainer = document.getElementById('produtos');
+    let total = 0;
+
+    produtos.forEach(produto => {
+      const [quantidade, flor] = produto.split(' de ');
+
+      // Adiciona os produtos na página
+      const produtoDiv = document.createElement('div');
+      produtoDiv.classList.add('produto');
+      produtoDiv.innerHTML = `<p><strong>${flor}</strong></p><p>Quantidade: ${quantidade}</p>`;
+
+      produtosContainer.appendChild(produtoDiv);
+
+      // Calcula o total (apenas um exemplo simples, você pode calcular de outra forma)
+      total += parseInt(quantidade);
+    });
+
+    // Exibe o total
+    document.getElementById('total').innerHTML = `Total de flores: ${total} flores`;
+
+  </script>
+
+</body>
+</html>
